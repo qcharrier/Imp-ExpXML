@@ -8,6 +8,9 @@ include '../fonctions/fct_Export.php';
     </HEAD>
     <BODY>
         <h1>Rechercher un fichier :</h1>
-        <input type="button" name="importXML">
+        <form method="post" action=".?page=affichageXML" >
+            <input type="file" name="fichierXML" id="fichierXML" /><br />
+            <input type="submit" name="submit" value="Envoyer" />
+        </form>
     </BODY>
 <HTML>
