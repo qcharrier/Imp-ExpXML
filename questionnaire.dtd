@@ -1,0 +1,86 @@
+<!ELEMENT quiz (question)*>
+        <!ELEMENT question (category|name|questiontext|generalfeedback|defaultgrade|penalty|hidden|answer|unitgradingtype|unitpenalty|showunits|unitsleft|units|hint|shuffleanswers|correctfeedback|partiallycorrectfeedback|incorrectfeedback|shownumcorrect|subquestion|single|answernumbering|usecase|responseformat|responserequired|responsefieldlines|attachments|attachmentsrequired|graderinfo|responsetemplate|tags|file|drag|drop|showmisplaced|dragbox|selectoption|choose|subcats)*>
+        <!ATTLIST question
+                type CDATA #REQUIRED>
+        <!ELEMENT category (text)*>
+        <!ELEMENT text (#PCDATA)>
+        <!ELEMENT name (text)*>
+        <!ELEMENT questiontext (text|file)*>
+        <!ATTLIST questiontext
+                format CDATA #REQUIRED>
+        <!ELEMENT generalfeedback (text)*>
+        <!ATTLIST generalfeedback
+                format CDATA #REQUIRED>
+        <!ELEMENT defaultgrade (#PCDATA)>
+        <!ELEMENT penalty (#PCDATA)>
+        <!ELEMENT hidden (#PCDATA)>
+        <!ELEMENT answer (text|feedback|tolerance)*>
+        <!ATTLIST answer
+                format CDATA #IMPLIED
+                fraction CDATA #IMPLIED>
+        <!ELEMENT feedback (text)*>
+        <!ATTLIST feedback
+                format CDATA #REQUIRED>
+        <!ELEMENT tolerance (#PCDATA)>
+        <!ELEMENT unitgradingtype (#PCDATA)>
+        <!ELEMENT unitpenalty (#PCDATA)>
+        <!ELEMENT showunits (#PCDATA)>
+        <!ELEMENT unitsleft (#PCDATA)>
+        <!ELEMENT file (#PCDATA)>
+        <!ATTLIST file
+                encoding CDATA #REQUIRED
+                name CDATA #REQUIRED
+                path CDATA #IMPLIED>
+        <!ELEMENT units (unit)*>
+        <!ELEMENT unit (multiplier|unit_name)*>
+        <!ELEMENT multiplier (#PCDATA)>
+        <!ELEMENT unit_name (#PCDATA)>
+        <!ELEMENT hint (text|shownumcorrect)*>
+        <!ATTLIST hint
+                format CDATA #REQUIRED>
+        <!ELEMENT shuffleanswers (#PCDATA)>
+        <!ELEMENT correctfeedback (text)*>
+        <!ATTLIST correctfeedback
+                format CDATA #REQUIRED>
+        <!ELEMENT partiallycorrectfeedback (text)*>
+        <!ATTLIST partiallycorrectfeedback
+                format CDATA #REQUIRED>
+        <!ELEMENT incorrectfeedback (text)*>
+        <!ATTLIST incorrectfeedback
+                format CDATA #REQUIRED>
+        <!ELEMENT shownumcorrect (#PCDATA)>
+        <!ELEMENT subquestion (text|answer)*>
+        <!ATTLIST subquestion
+                format CDATA #REQUIRED>
+        <!ELEMENT single (#PCDATA)>
+        <!ELEMENT answernumbering (#PCDATA)>
+        <!ELEMENT usecase (#PCDATA)>
+        <!ELEMENT responseformat (#PCDATA)>
+        <!ELEMENT responserequired (#PCDATA)>
+        <!ELEMENT responsefieldlines (#PCDATA)>
+        <!ELEMENT attachments (#PCDATA)>
+        <!ELEMENT attachmentsrequired (#PCDATA)>
+        <!ELEMENT graderinfo (text)*>
+        <!ATTLIST graderinfo
+                format CDATA #REQUIRED>
+        <!ELEMENT responsetemplate (text)*>
+        <!ATTLIST responsetemplate
+                format CDATA #REQUIRED>
+        <!ELEMENT tags (tag)*>
+        <!ELEMENT tag (text)*>
+        <!ELEMENT drag (no|text|draggroup|noofdrags)*>
+        <!ELEMENT no (#PCDATA)>
+        <!ELEMENT draggroup (#PCDATA)>
+        <!ELEMENT drop (text|no|choice|xleft|ytop|shape|coords)*>
+        <!ELEMENT choice (#PCDATA)>
+        <!ELEMENT xleft (#PCDATA)>
+        <!ELEMENT ytop (#PCDATA)>
+        <!ELEMENT showmisplaced (#PCDATA)>
+        <!ELEMENT noofdrags (#PCDATA)>
+        <!ELEMENT shape (#PCDATA)>
+        <!ELEMENT coords (#PCDATA)>
+        <!ELEMENT dragbox (text|group)*>
+        <!ELEMENT group (#PCDATA)>
+        <!ELEMENT selectoption (text|group)*>
+        <!ELEMENT choose (#PCDATA)>
+<!ELEMENT subcats (#PCDATA)>
